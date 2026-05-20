@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     environment {
-        API_BASE_URL = credentials('API_BASE_URL')
-        UI_BASE_URL = credentials('UI_BASE_URL')
-        ADMIN_USERNAME = credentials('ADMIN_USERNAME')
-        ADMIN_PASSWORD = credentials('ADMIN_PASSWORD')
+        API_BASE_URL = 'https://dummy-api.com'
+        UI_BASE_URL = 'https://dummy-ui.com'
+        ADMIN_USERNAME = 'admin'
+        ADMIN_PASSWORD = 'password123'
     }
 
     stages {
