@@ -1,8 +1,6 @@
 pipeline {
-    // 1. THE ENVIRONMENT: Tell Jenkins to run this on any available node
     agent any
 
-    // 2. THE VAULT: Pulling credentials securely from Jenkins Credentials Manager
     environment {
         API_BASE_URL = credentials('API_BASE_URL')
         UI_BASE_URL = credentials('UI_BASE_URL')
@@ -11,13 +9,13 @@ pipeline {
     }
 
     stages {
-        stage('📥 Download Codebase') {
+        stage('Download Codebase') {
             steps {
                 checkout scm
             }
         }
 
-        stage('🐍 Setup Python & Dependencies') {
+        stage('Setup Python and Dependencies') {
             steps {
                 bat '''
                     python -m venv venv
@@ -29,7 +27,7 @@ pipeline {
             }
         }
 
-        stage('🚀 Execute Parallel Test Engine') {
+        stage('Execute Parallel Test Engine') {
             steps {
                 bat '''
                     call venv\\Scripts\\activate.bat
@@ -39,7 +37,6 @@ pipeline {
         }
     }
 
-    // 3. ARTIFACTS: Generate the Dashboard even if tests fail
     post {
         always {
             archiveArtifacts artifacts: 'report.html', allowEmptyArchive: true
