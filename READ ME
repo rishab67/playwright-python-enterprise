@@ -1,0 +1,33 @@
+PytestPython/                     # Project Root
+│
+├── .github/workflows/            # GitHub Actions CI/CD pipelines
+├── docker/                       # Docker Compose files (Jenkins & ELK Stack)
+├── reports/                      # Allure HTML Reports & Screenshots
+├── test_data/                    # JSON/CSV files for Data-Driven Testing (DDT)
+│
+├── core/                         # The Engine Room (Shared Utilities)
+│   ├── config.py                 # Reads your .env file
+│   ├── logger.py                 # Formats logs for ELK/Kibana
+│   └── data_generator.py         # Generates fake emails/names dynamically
+│
+├── api_clients/                  # API Backend Logic
+│   ├── base_client.py            # Core GET/POST/PUT/DELETE engine
+│   ├── auth_client.py            # OAuth 2.0 & Token generation logic
+│   └── booking_client.py         # Restful-Booker specific endpoints
+│
+├── page_objects/                 # UI Frontend Logic (POM)
+│   ├── base_page.py              # Core Playwright locators & explicit waits
+│   ├── login_page.py             # Magento Luma Login
+│   └── checkout_page.py          # Magento Luma Checkout
+│
+├── tests/                        # The Actual Test Scripts
+│   ├── conftest.py               # Pytest Fixtures (Browser setup, Auth Hooks)
+│   ├── api/                      # API Test Suite
+│   │   └── test_restful_booker.py
+│   └── ui/                       # UI Test Suite
+│       └── test_magento_checkout.py
+│
+├── .env                          # (You already built this)
+├── .gitignore                    # (You already built this)
+├── pytest.ini                    # (You already built this)
+└── requirements.txt              # Master list of pip packages

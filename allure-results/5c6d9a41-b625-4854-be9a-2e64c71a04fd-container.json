@@ -1,0 +1,16 @@
+{
+  "befores": [
+    {
+      "name": "browser_type_launch_args",
+      "status": "passed",
+      "start": 1778951924080,
+      "stop": 1778951924080
+    }
+  ],
+  "children": [
+    "7a7aec89-008c-477e-9636-7184b421040c"
+  ],
+  "start": 1778951924080,
+  "stop": 1778951933511,
+  "uuid": "d00712d2-1f91-4132-9111-af5f0ddce354"
+}

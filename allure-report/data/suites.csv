@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","8129","test_end_to_end_shopping_journey[chromium]","tests.ui","2026-05-16","failed","2026-05-16","","test_e2e_journey","",""
