@@ -5,3 +5,4 @@ pytest-xdist==3.5.0
 pytest-html==4.1.1
 Faker==22.5.1
 python-dotenv==1.0.1
+allure-pytest
