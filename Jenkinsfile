@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        API_BASE_URL = 'https://dummy-api.com'
-        UI_BASE_URL = 'https://dummy-ui.com'
+        API_BASE_URL = 'https://restful-booker.herokuapp.com'
+        UI_BASE_URL = 'https://www.amazon.in'
         ADMIN_USERNAME = 'admin'
         ADMIN_PASSWORD = 'password123'
     }
