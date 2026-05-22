@@ -24,7 +24,6 @@ jobs:
         playwright install chromium
 
     - name: 🚀 Execute Parallel Test Engine
-      # Inject the vault secrets into the server's environment variables
       env:
         API_BASE_URL: ${{ secrets.API_BASE_URL }}
         UI_BASE_URL: ${{ secrets.UI_BASE_URL }}
