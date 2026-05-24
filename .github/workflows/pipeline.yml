@@ -30,11 +30,13 @@ jobs:
         ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME }}
         ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
       run: |
-        pytest tests/ -n auto --html=report.html --self-contained-html
+        pytest tests/ -n auto --html=report.html --self-contained-html --screenshot=only-on-failure
 
-    - name: 📊 Upload Executive Dashboard
+    - name: 📊 Upload Executive Dashboard and Evidence
       if: always()
       uses: actions/upload-artifact@v4
       with:
         name: Enterprise-Test-Report
-        path: report.html
+        path: |
+          report.html
+          test-results/
